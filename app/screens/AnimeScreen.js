@@ -4,23 +4,17 @@ import {
   Image,
   StyleSheet,
   View,
-  Dimensions,
   ScrollView,
-  StatusBar,
   TextInput,
   Linking,
   Alert,
-  Modal,
 } from "react-native";
 import AppButton from "../components/AppButton";
 import LoginBackground from "../components/LoginBackground";
-import AppText from "../components/AppText";
 import { useNavigation } from "@react-navigation/core";
 import AnimeCard from "../components/AnimeCard";
 import { auth, db } from "../../firebase";
 import {
-  collection,
-  addDoc,
   setDoc,
   doc,
   getDoc,
@@ -29,11 +23,8 @@ import {
 import ModalAlert from "../components/Modal";
 
 function AnimeScreen(props) {
-  const [titles, setTitles] = useState([]);
-  const [img, setImg] = useState();
   const [url, setUrl] = useState();
   const [text, setText] = useState();
-  const [isLoading, setLoading] = useState(false);
   const [searchText, setSearchText] = useState("");
   const [data, setData] = useState(null);
   const user = auth.currentUser?.email;

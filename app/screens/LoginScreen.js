@@ -1,12 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  KeyboardAvoidingView,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-  ImageBackground,
-} from "react-native";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebase";
 import { useNavigation } from "@react-navigation/native";
