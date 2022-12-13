@@ -5,7 +5,7 @@ import LoginBackground from "../components/LoginBackground";
 
 const WikiScreen = () => {
   const OpenAI = require("openai-api");
-  const OPENAI_API_KEY = "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";
+  const OPENAI_API_KEY = "SECRETKEY";
   const openai = new OpenAI(OPENAI_API_KEY);
   const [texti, setTexti] = useState("");
   const [answer, setAnswer] = useState("");
